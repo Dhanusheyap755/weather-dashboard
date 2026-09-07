@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Weather Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>🌤️ Live Weather Dashboard</h1>
+      <p>Search any city for current weather conditions.</p>
+    </header>
+
+    <section class="search-box">
+      <input id="cityInput" type="text" placeholder="Enter city name" value="Chennai">
+      <button id="searchBtn">Get Weather</button>
+    </section>
+
+    <p id="status" class="status"></p>
+
+    <section id="weatherCard" class="card hidden">
+      <div class="top">
+        <div>
+          <h2 id="cityName">--</h2>
+          <p id="condition">--</p>
+        </div>
+        <div class="temperature"><span id="temperature">--</span>°C</div>
+      </div>
+
+      <div class="stats">
+        <div><span>💧</span><b id="humidity">--</b><small>Humidity</small></div>
+        <div><span>💨</span><b id="wind">--</b><small>Wind Speed</small></div>
+        <div><span>🌡️</span><b id="feels">--</b><small>Feels Like</small></div>
+      </div>
+
+      <details>
+        <summary>View JSON response</summary>
+        <pre id="jsonOutput"></pre>
+      </details>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
